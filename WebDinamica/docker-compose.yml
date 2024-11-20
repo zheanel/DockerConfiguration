@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: ${APP_NAME}-database
+    image: mariadb
+    ports:
+      - 3309:3306
+    restart: always
+    volumes:
+      - C:/bbdd/WebDinamica_db:/var/lib/mysql
+      - ./www_sql_estructura.sql:/docker-entrypoint-initdb.d/1.sql
+    environment:
+      MARIADB_ROOT_PASSWORD: abcd1234@
+      MARIADB_USER: $db_user
+      MARIADB_PASSWORD: $db_passwd
+      MARIADB_DATABASE: $db_name
+    networks:
+      net: 
+        ipv4_address: 172.30.1.2
+
+  www:
+    build:
+      context: .
+    container_name: ${APP_NAME}-www
+    command: ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+    tty: true
+    environment:
+      db_name: $db_name
+      db_user: $db_user
+      db_passwd: $db_passwd
+      db_host: $db_host
+    ports:
+      - 85:80
+
+    networks:
+      net:
+        ipv4_address: 172.30.1.3
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.1.0/24
