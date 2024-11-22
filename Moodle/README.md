@@ -21,7 +21,7 @@ Si usamos windows, no deberemos de modificar nada del archivo
 ## Instalacion Moodle
 1. Seleccionamos nuestro idioma
 ![Setup 1](https://github.com/zheanel/DockerConfiguration/blob/main/Moodle/screenshots/setup1.png)
-2. Dejamos los valores tal y como estan, si modificamos el directorio podemos tener datos
+2. Dejamos los valores tal y como estan, no modificar el directorio!
 ![Setup 2](https://github.com/zheanel/DockerConfiguration/blob/main/Moodle/screenshots/setup2.png)
 3. Seleccionamos como base de datos: MySQL mejorado
 ![Setup 3](https://github.com/zheanel/DockerConfiguration/blob/main/Moodle/screenshots/setup3.png)
