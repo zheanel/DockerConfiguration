@@ -3,7 +3,7 @@
 
 1. Descagamos el repositorio en nuestro equipo, puede ser descargando el ZIP desde Code > Download ZIP o usando el comando git clone https://github.com/zheanel/DockerConfiguration.git
 
-2. Accedemos a la carpeta DockerConfiguration
+2. Accedemos a la carpeta DockerConfiguration/Moodle
 3. Antes de ejecutar el contenedor, deberemos de revisar la ruta dentro de docker-compose.yml.
 
 ## Rutas a modificar
