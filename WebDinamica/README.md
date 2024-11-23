@@ -5,7 +5,7 @@
 2. Accedemos a la carpeta DockerConfiguration/WebDinamica
 
 3. Ejecutamos docker-compose build --no-cache .
-4. Ejecutamos docker-compose up
+4. Ejecutamos docker-compose up -d
 5. Por defecto, podemos acceder a la web desde http://localhost:85
 
 ## Agregar Proyectos

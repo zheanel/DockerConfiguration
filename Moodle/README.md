@@ -15,7 +15,7 @@ Si usamos windows, no deberemos de modificar nada del archivo
 
 4. En el archivo .env, podemos modificar las credenciales del servidor MySQL. Para pruebas, podemos dejarlo por defecto
 4. Ejecutamos docker-compose build --no-cache .
-5. Ejecutamos docker-compose up
+5. Ejecutamos docker-compose up -d
 6. Por defecto, podemos acceder a Moodle desde http://localhost:84
 
 ## Instalacion Moodle
