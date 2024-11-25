@@ -3,10 +3,10 @@
 1. Descagamos el repositorio en nuestro equipo, puede ser descargando el ZIP desde Code > Download ZIP o usando el comando git clone https://github.com/zheanel/DockerConfiguration.git
 
 2. Accedemos a la carpeta DockerConfiguration/WebDinamica
-
-3. Ejecutamos docker-compose build --no-cache .
-4. Ejecutamos docker-compose up -d
-5. Por defecto, podemos acceder a la web desde http://localhost:85
+3. [SOLO LINUX] Cambiamos la ruta del docker-compose.yml C:/bbdd/WebDinamica_db:/var/lib/mysql a /root/bbdd/WebDinamica_db:/var/lib/mysql
+4. Ejecutamos docker-compose build --no-cache .
+5. Ejecutamos docker-compose up -d
+6. Por defecto, podemos acceder a la web desde http://localhost:85
 
 ## Agregar Proyectos
 1. Accedemos a http://localhost:85/addProject.php
