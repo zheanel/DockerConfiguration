@@ -16,11 +16,12 @@
 ![Setup 3](https://github.com/zheanel/DockerConfiguration/blob/main/Mediawiki/screenshots/setup3.png)
 4. Marcamos la casilla y damos clic en continuar
 ![Setup 4](https://github.com/zheanel/DockerConfiguration/blob/main/Mediawiki/screenshots/setup4.png)
-5. Se nos descargara un archivo de configuracion, este lo tendremos que mover al contenedor de docker
+5. Rellenamos los datos de nuestra cuenta de usuario
+6. Se nos descargara un archivo de configuracion, este lo tendremos que mover al contenedor de docker
 ![Setup 5](https://github.com/zheanel/DockerConfiguration/blob/main/Mediawiki/screenshots/setup5.png)
-6. Vamos a la carpeta donde tenemos el archivo descargado y ejecutamos el comando: docker cp LocalSettings.php mediawiki_www:/var/www/html
+7. Vamos a la carpeta donde tenemos el archivo descargado y ejecutamos el comando: docker cp LocalSettings.php mediawiki_www:/var/www/html
 ![Setup 6](https://github.com/zheanel/DockerConfiguration/blob/main/Mediawiki/screenshots/setup6.png)
-7. Volvemos a acceder a http://localhost:89 y veremos que podemos acceder sin problema a nuestro wiki
+8. Volvemos a acceder a http://localhost:89 y veremos que podemos acceder sin problema a nuestro wiki
 
 ## Acceder a la base de datos
 1. Descargamos HeidiSQL desde https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_64_Portable.zip
