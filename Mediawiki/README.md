@@ -3,7 +3,7 @@
 1. Descagamos el repositorio en nuestro equipo, puede ser descargando el ZIP desde Code > Download ZIP o usando el comando git clone https://github.com/zheanel/DockerConfiguration.git
 
 2. Accedemos a la carpeta DockerConfiguration/Wordpress
-3. [SOLO LINUX] Cambiamos la ruta del docker-compose.yml C:/mediawiki/mw_db:/var/lib/mysql a /root/mediawiki/mw_db:/var/lib/mysql y C:/mediawikiDocker/mw_data/:/var/www/html a /root/mediawikiDocker/mw_data:/var/www/html
+3. [SOLO LINUX] Cambiamos la ruta del docker-compose.yml C:/mediawiki/mw_db:/var/lib/mysql a /root/mediawiki/mw_db:/var/lib/mysql y C:/mediawikiDocker/mw_imgdata/:/var/www/html/images a /root/mediawikiDocker/mw_imgdata:/var/www/html/images
 4. Ejecutamos docker-compose build --no-cache .
 5. Ejecutamos docker-compose up -d
 
