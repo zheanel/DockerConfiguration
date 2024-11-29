@@ -13,3 +13,13 @@
 ![Setup 1](https://github.com/zheanel/DockerConfiguration/blob/main/WebDinamica/screenshots/setup1.png)
 2. Rellenamos los campos solicitados y damos clic en Agregar Proyecto
 ![Setup 2](https://github.com/zheanel/DockerConfiguration/blob/main/WebDinamica/screenshots/setup2.png)
+
+## Acceder a la base de datos
+1. Descargamos HeidiSQL desde https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_64_Portable.zip
+2. Abrimos el ejecutable y damos clic en Nueva
+3. Cambiamos el puerto por 3309
+4. Usamos la contraseña que aparece en docker-compose.yml
+
+## Parar y Activar contenedor (debemos de estar dentro de la carpeta)
+1. Para pararlo, usamos el comando: docker compose down
+2. Para activarlo, usamos el comando: docker compose up -d

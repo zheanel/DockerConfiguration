@@ -36,4 +36,12 @@ Si usamos windows, no deberemos de modificar nada del archivo
 8. Ahora rellenamos los datos que nos pide a nuestro gusto
 ![Setup 8](https://github.com/zheanel/DockerConfiguration/blob/main/Moodle/screenshots/setup8.png)
 
+## Acceder a la base de datos
+1. Descargamos HeidiSQL desde https://www.heidisql.com/downloads/releases/HeidiSQL_12.8_64_Portable.zip
+2. Abrimos el ejecutable y damos clic en Nueva
+3. Cambiamos el puerto por 3308
+4. Usamos la contraseña que aparece en docker-compose.yml
 
+## Parar y Activar contenedor (debemos de estar dentro de la carpeta)
+1. Para pararlo, usamos el comando: docker compose down
+2. Para activarlo, usamos el comando: docker compose up -d
