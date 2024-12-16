@@ -25,3 +25,5 @@ COPY webEstatica.conf /etc/apache2/sites-enabled/webEstatica.conf
 RUN a2enmod rewrite headers
 RUN service apache2 restart
 WORKDIR /var/www/webEstatica/
+EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]
