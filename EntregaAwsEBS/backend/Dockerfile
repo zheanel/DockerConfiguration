@@ -2,6 +2,10 @@ FROM ubuntu:24.04
 ARG DEBIAN_FRONTEND=noninteractive
 RUN  apt update --fix-missing -y && apt upgrade -y
 
+# -- EDITAR POR EL USUARIO --
+ENV CORS_ALLOW_ORIGIN='^https?://(midominio-ebs-frontend|localhost|127\.0\.0\.1)(:[0-9]+)?$'
+ENV DATABASE_URL=mysql://username:password@dbHost:3306/databaseName?serverVersion=10.11.2-MariaDB&charset=utf8mb4
+
 # Dejar sistema preparado para continuar
 RUN apt install -y apt-utils git rsync nano vim unzip curl wget software-properties-common git
 RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php

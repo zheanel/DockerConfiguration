@@ -2,6 +2,9 @@ FROM ubuntu:24.04
 ARG DEBIAN_FRONTEND=noninteractive
 RUN  apt update --fix-missing -y && apt upgrade -y
 
+# -- EDITAR POR EL USUARIO --
+ENV backend_domain=dominioebs-aws-backend
+
 # Dejar sistema preparado para continuar
 RUN apt install -y apt-utils git rsync nano vim unzip curl wget software-properties-common git
 RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
