@@ -2,9 +2,6 @@ FROM ubuntu:24.04
 ARG DEBIAN_FRONTEND=noninteractive
 RUN  apt update --fix-missing -y && apt upgrade -y
 
-# -- EDITAR POR EL USUARIO --
-ENV backend_domain=dominioebs-aws-backend
-
 # Dejar sistema preparado para continuar
 RUN apt install -y apt-utils git rsync nano vim unzip curl wget software-properties-common git
 RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
@@ -16,10 +13,14 @@ ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
 ENV APACHE_LOG_DIR /var/log/apache2
 RUN rm /var/www/html/*
+RUN rm /etc/apache2/sites-enabled/000-default.conf
+COPY frontend.conf /etc/apache2/sites-enabled/frontend.conf
 
 # Subo archivos FRONTEND
 COPY wwwdata/. /var/www/html
 RUN chown www-data:www-data -R /var/www/html/*
+# -- EDITAR POR EL USUARIO --
+RUN sed -i 's/<backend_domain>/backend_domain/g' /var/www/html/main-ZKT6JCA3.js
 
 # Activar opciones de apache y reiniciar servicio
 RUN a2enmod rewrite headers
