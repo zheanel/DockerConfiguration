@@ -20,9 +20,11 @@ COPY frontend.conf /etc/apache2/sites-enabled/frontend.conf
 COPY wwwdata/. /var/www/html
 RUN chown www-data:www-data -R /var/www/html/*
 # -- EDITAR POR EL USUARIO --
-RUN sed -i 's/<backend_domain>/backend_domain/g' /var/www/html/main-ZKT6JCA3.js
+RUN sed -i 's/<backend_domain>/backend_domain_here/g' /var/www/html/main-ZKT6JCA3.js
 
 # Activar opciones de apache y reiniciar servicio
 RUN a2enmod rewrite headers
 RUN service apache2 restart
 WORKDIR /var/www/html/
+EXPOSE 80
+CMD ["apache2ctl", "-D", "FOREGROUND"]
