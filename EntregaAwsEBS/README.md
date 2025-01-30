@@ -28,7 +28,7 @@ El software que va instalado en los contenedores es el siguiente:
 
 ## Pasos de Implementacion
 
-1. Crearemos una nueva base de datos en RDS, deberemos de establecer un usuario y contraseña. Deberemos de permitir el acceso publico para poder instalar la base de datos
+1. Crearemos una nueva base de datos en RDS, deberemos de establecer un usuario y contraseña. Permitiremos el acceso publico para poder instalar la base de datos, luego se lo quitamos por seguridad
 
 2. Modificaremos el archivo Dockerfile del backend, en la linea que dice ENV DATABASE_URL=
 
